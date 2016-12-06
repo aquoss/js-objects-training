@@ -34,3 +34,49 @@
 */
 
 // YOUR CODE HERE
+
+function daysUntilDate(str){
+  var today = Date.now();
+  var otherDate = Date.parse(str);
+  var dayCount = otherDate - today;
+  var days = dayCount/(8.64*Math.pow(10,7));
+  return Math.round(days);
+}
+
+birthdayReminder([
+  {
+    name: "Jack",
+    dob: "10/31/2013"
+  },
+  {
+    name: "Jill",
+    dob: "4/01/1975"
+  }
+]);
+
+function birthdayReminder(arr){
+  var bdayArr = [];
+  // var sortedObject = {};
+  arr.forEach(function(object){
+    var days = daysUntilDate(birthdays(object.dob));
+    bdayArr.push(object.name + "'s birthday is in " + days + " days");
+    // sortedObject[object.name] = days;
+  })
+  return bdayArr;
+}
+
+function birthdays(str) {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1;
+  var mmdd = [mm,dd];
+  var dob = str.split('/');
+  dob.pop();
+  if (dob[0] <= mmdd[0]) {
+    dob.push('2017');
+  } else {
+    dob.push('2016');
+  }
+  var finalDate = dob.join('/');
+  return finalDate;
+}
