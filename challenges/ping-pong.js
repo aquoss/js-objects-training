@@ -38,3 +38,39 @@
 */
 
 // YOUR CODE HERE
+
+function pingPong(arr){
+   var ballIndex;
+   var ball = {};
+   var right = true;
+   arr.forEach(function(pongPosition){
+     if (pongPosition){
+       ballIndex = arr.indexOf(pongPosition);
+       console.log(ballIndex);
+       ball = arr[ballIndex];
+       if (ballIndex===arr.length-1 || ballIndex===0){
+         changeDirection(ballIndex,arr);
+       }
+       ball.steps++;
+       if (right) {
+         arr[ballIndex+1]=ball;
+         arr[ballIndex]=null;
+       } else {
+         arr[ballIndex-1]=ball;
+         arr[ballIndex]=null;
+       }
+     }
+   })
+   return arr;
+}
+
+function changeDirection(ballIndex,array){
+  if (ballIndex===0) {
+    right = true;
+  } else {
+    right = false;
+  }
+}
+
+
+var table = [null, null, {steps: 2}, null];
