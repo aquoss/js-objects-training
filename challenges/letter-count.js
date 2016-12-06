@@ -31,3 +31,21 @@
 */
 
 // YOUR CODE HERE
+
+function letterCount(str) {
+  var capitalStr = str.toUpperCase();
+  var newStr = capitalStr.replace(/[^a-zA-Z]/g,'');
+  var letterArray = newStr.split('');
+  var letterObject = {};
+  letterArray.forEach(function(letter) {
+    if (letterObject[letter]) {
+      letterObject[letter]++;
+    } else {
+      letterObject[letter] = 1;
+    }
+    return letterObject;
+  })
+  console.log(letterObject);
+}
+
+letterCount('apple');
