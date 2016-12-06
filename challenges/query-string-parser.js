@@ -45,3 +45,16 @@
 */
 
 // YOUR CODE HERE
+
+function parseQueryString(str) {
+  var newObject = {};
+  var firstArray = str.split('&');
+  firstArray.forEach(function(str) {
+    var secondArray = str.split('=');
+    newObject[secondArray[0]]=secondArray[1];
+    return newObject;
+  })
+  console.log(newObject);
+}
+
+parseQueryString("first=alpha&last=omega");
