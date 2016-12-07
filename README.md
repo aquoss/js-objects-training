@@ -1,3 +1,6 @@
+#Training Reflection
+This assignment was especially challening. We really had to work together to figure out the logic behind these functions. I wish the assingment had been split out over two days, because we rarely were able to reach the bonus portions (which I always want to try if possible). However, it was a really good lesson in time management, because I spent too much time trying to solve everything on my own. I should have set a timer and worked on understanding the given solutions after a certain amount of time passed.
+
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Javascript Objects - Problem Set
 
 * Please **Fork & Clone** this repo.
